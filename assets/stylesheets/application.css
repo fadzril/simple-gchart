@@ -1,0 +1,442 @@
+@import "reset.css";
+@import "text.css";
+@import "960.css";
+
+body {
+	background: #dbdbdb url(../images/body.png) top left repeat-x;
+	color: #333;
+	font-size: .8em;
+	line-height: 1.6em;
+	text-align: center;
+	margin: 1em 0;
+	padding: 0;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1 {
+	font-family: Georgia, serif;
+	font-weight: normal;
+	text-align: left;
+}
+
+h2 {
+	padding: 20px 0 0;
+	text-align: left;
+}
+
+p {
+	overflow: hidden;
+	padding: 0;
+	text-align: left;
+}
+
+#wrapper {
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+}
+
+/************************************************************************
+* Header
+************************************************************************/
+#header {
+	position: relative;
+	margin: 2em 1em 1em 1em;
+	padding: 0;
+}
+#settings {
+	padding: 0;
+	margin: 0;
+	position: relative
+}
+#settings ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+#settings ul li {
+	position: relative;
+	display: inline;
+	padding: 0;
+	margin: 0;
+	float: left;
+	border-right: 1px solid #555;
+}
+#settings ul li a:hover,
+#settings ul li a.hover,
+#settings ul ul:hover {
+	background: #333;
+}
+#settings ul li a {
+	padding: .5em 1.5em;
+	margin: 0;
+}
+#settings ul li.last {
+	border-right: none;
+}
+#settings ul li span.arrow {
+	width: 10px;
+	height: 10px;
+	background: transparent url(../images/arrow.png) -10px -100px no-repeat;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+#settings ul ul {
+	margin: .3em 0;
+	padding: 0;
+	display: none;
+	position: absolute;
+	z-index: 10;
+}
+#settings li li {
+	display: block;
+	background: #333;
+	border: none;
+	margin: 0;
+	padding: .5em 0;
+	width: 180px;		
+	z-index: 20;
+}
+#settings li li a {
+	border: none;
+}
+#settings li li a:hover,
+#settings li li a.hover {
+	background: none;
+}
+/************************************************************************
+* Main Navigation
+************************************************************************/
+#navigation {
+	padding: 0;
+	margin: 2.0em 0 1.0em;
+	overflow: hidden;
+	position: relative;
+	font-size: 1.0em;
+	font-weight: 600;
+	height: 42px;
+}
+#navigation ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+#navigation ul li {
+	display: inline;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+#navigation ul li a {
+	padding: 10px 18px 12px;
+	border:none;
+	float: left;
+	outline: none;
+}
+#navigation ul li.current.last a {
+	color: #293743;
+	/* background: transparent url(../images/navigation-li-a.png) top left no-repeat; */
+}
+#navigation ul li.current a {
+	color: #293743;
+}
+#navigation ul li.current {
+	background: transparent url(../images/body.png) bottom center repeat-x;
+	border: none;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+}
+
+/************************************************************************
+* Portlets
+************************************************************************/
+#content {
+	position: relative;
+}
+.portlet {
+	padding: 0;
+	margin: 0 0 .5em 0;
+	position: relative;
+	clear: both;
+}
+.portlet .title {
+	font-size: 1.3em;
+	font-weight: 600;
+	color: #374b5b;
+	background: #e1e1e1 url(../images/portlet-title.png) top left repeat-x;
+	padding: 10px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+}
+.portlet .show {
+	position: absolute;
+	right: 5px;
+	top: 8px;
+	text-indent: -999em;
+	color: #FFF;
+	background: transparent url(../images/icon-min.png) top left no-repeat;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+}
+.portlet .show:hover {
+	background: transparent url(../images/icon-min.png) bottom left no-repeat;
+}
+.portlet .hide {
+	position: absolute;
+	right: 5px;
+	top: 8px;
+	text-indent: -999em;
+	color: #FFF;
+	background: transparent url(../images/icon-max.png) top left no-repeat;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+}
+.portlet .hide:hover {
+	background: transparent url(../images/icon-max.png) bottom left no-repeat;
+}
+.portlet .charts {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	background: #F0F0F0;
+	border: 1px solid #CCC;
+	border-top: 1px solid #FFF;
+	overflow: hidden
+}
+.portlet .chart-element {
+	position: relative;
+	z-index: 0;
+}
+.portlet .half {
+	width: 50%;
+	float: left;
+}
+.portlet .charts h4,
+.portlet .half h4 {
+	padding: 10px;
+	margin: 0;
+	text-align: left;
+	font-size: 1.2em;
+}
+.portlet .chart-description {
+	padding: 10px;
+	clear: both;
+}
+.portlet .chart-description h4 {
+	margin-bottom: 10px;
+	font-size: 1.2em;
+}
+.summary h4 {
+	font-size: 1.2em;
+	padding: .5em 0;
+	margin: 0;
+	border-bottom: 1px solid #CCC;
+}
+.summary ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.summary ul li {
+	padding: 5px 0;
+	display: block;
+}
+.summary ul ul {
+	border-top: 1px solid #FFF;
+}
+.summary li li {
+	margin: 0;
+}
+.select {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	z-index: 10;
+	font-size: 75%;
+	text-transform: uppercase;
+}
+.select ul {
+	padding: 0;
+	margin: 0 0 0 .5em;
+	float: right;
+	list-style: none;
+}
+.select ul li {
+	position: relative;
+	display: inline;
+	padding: .3em .5em .3em 0;
+	margin: 0;
+	float: left;
+	background: #333;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.select ul li a:hover,
+.select ul li a.hover,
+.select ul ul:hover {
+	background: transparent;
+}
+.select ul li a {
+	padding: .5em 1.5em;
+	margin: 0;
+	outline: none;
+}
+.select ul li.last {
+	border-right: none;
+}
+.select ul li span.arrow {
+	width: 10px;
+	height: 10px;
+	background: transparent url(../images/arrow.png) -10px -100px no-repeat;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+.select ul ul {
+	margin: 0;
+	padding: 0;
+	display: none;
+	position: absolute;
+	z-index: 10;
+}
+.select li li {
+	display: block;
+	background: #333;
+	border-top: 1px dotted #444;
+	margin: 0;
+	padding: .3em 0;
+	width: 100%;		
+	z-index: 20;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+.select li li a {
+	border: none;
+}
+.select li li a:hover,
+.select li li a.hover {
+	background: none;
+	outline: none;
+}
+
+/************************************************************************
+* Sidebars
+************************************************************************/
+#sidebar {
+	margin: 0;
+	top: 0;
+	padding: 5px;
+	background: #EEE;
+	border-left: 5px solid #E6E6E6;
+}
+#sidebar a {
+	outline: none;
+}
+#sidebar h3 {
+	margin: 1em 0 1em -1em;
+	padding: 10px 0 10px 30px;
+	font-size: 1.2em;
+	color: #FFF;
+	text-shadow: 0 1px #374b5b;
+	background: transparent url(../images/sidebar-title.png) top left no-repeat;
+}
+#sidebar ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#sidebar ul li {
+	position: relative;
+	display: block;
+	padding: 2px 10px;
+	margin: 0;
+	width: 180px;
+	border: 1px solid #FFF;
+	background: #a5a5a5 url(../images/sidebar-li.png) -25px 0 repeat-x;
+	cursor: pointer;
+}
+#sidebar ul li:hover,
+#sidebar ul li.current {
+	background: #374b5b url(../images/sidebar-li-current.png) -25px 0 repeat-x;
+}
+#sidebar ul ul {
+	position: relative;
+	z-index: 10;
+	margin: .5em 0;
+	padding: 0;
+}
+#sidebar li li {
+	padding: 4px 2px;
+	margin: 0;
+	background: none;
+	border: none;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #EEE;
+	font-size: 90%;
+	line-height: 1.5em;
+	position: relative;
+	z-index: 20;
+}
+#sidebar .current li {
+	border-top: 1px solid #566e84;
+	border-bottom: 1px solid #1d272f;
+}
+#sidebar li li:hover {
+	background: #1d272f;
+}
+#sidebar li li.first {
+	border-top: none;
+}
+#sidebar li li.last {
+	border-bottom: none;
+}
+/************************************************************************
+* Preloader
+************************************************************************/
+.preloader {
+	background: #000 url(../images/preload.gif) center center no-repeat;
+	color: #FFF;
+	font-weight: 600;
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	opacity: .8;
+	text-align: center;
+}
+
+/************************************************************************
+* Error
+************************************************************************/
+#error {
+	margin: 1em 0;
+	padding: 10px;
+	background: #FF0000;
+}
+
+.videolink {cursor:pointer;}
+.videobox {text-align:center;font-size:16px;font-weight:bold;margin:10px;margin-right:15px;margin-top:0;}
+.videobox .desc {margin-top:10px;font-size:14px;font-weight:normal;color:#777;}
+.videobox a {
+	color: #238de8;
+	outline: none;
+	text-decoration: none;
+	border-bottom: 1px solid #238de8;
+	font-size: .9em;
+}
